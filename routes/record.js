@@ -15,10 +15,7 @@ const ObjectId = require("mongodb").ObjectId;
 // This section will help you get a list of all the records.
 recordRoutes.route("/record").get(function (req, res) {
  let db_connect = dbo.getDb("employees");
- db_connect
-   .collection("records")
-   .find({})
-   .toArray(function (err, result) {
+ db_connect.collection("records").find({}).toArray(function (err, result) {
      if (err) throw err;
      res.json(result);
    });
