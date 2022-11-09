@@ -118,5 +118,10 @@ recordRoutes.route("/delete/:id").delete((req, response) => {
     response.json(obj);
   });
  });
+
+ //TEST ROUTE
+ recordRoutes.route("/test").get(function (req, res) {
+  console.log("Test");
+ });
  
 module.exports = recordRoutes;
