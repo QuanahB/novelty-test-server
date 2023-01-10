@@ -119,6 +119,7 @@ recordRoutes.route("/delete/:id").delete((req, response) => {
  //TEST ROUTE
  recordRoutes.route("/test").get(function (req, res) {
   console.log("Test");
+  res.send("<h1>It's working 🤗</h1>") 
  });
  
 module.exports = recordRoutes;
